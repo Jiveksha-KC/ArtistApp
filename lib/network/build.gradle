@@ -1,0 +1,17 @@
+apply from: rootProject.file("buildScripts/common-lib.gradle")
+
+android {
+    namespace AppConfig.APP_ID + ".network"
+}
+
+dependencies {
+    implementation project(":core:common")
+
+    api Libs.retrofit
+    api Libs.moshi
+
+    implementation Libs.logging_interceptor
+    implementation Libs.converter_moshi
+
+    //testImplementation project(":test-util:unit-test")
+}

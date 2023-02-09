@@ -1,0 +1,15 @@
+ext.getVersionNameAndCode = {
+
+    def versionCode = AppConfig.DEFAULT_VERSION_CODE
+
+    def buildNumber = System.getenv("BUILD_NUMBER")
+    if (buildNumber == null) {
+        buildNumber = "local"
+    } else {
+        versionCode = Integer.parseInt(buildNumber)
+    }
+
+    def versionName = "${AppConfig.BASE_VERSION_NAME} (${buildNumber})"
+
+    return new Tuple2(versionName, versionCode)
+}

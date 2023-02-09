@@ -1,0 +1,15 @@
+apply from: rootProject.file("buildScripts/common-lib.gradle")
+
+android {
+    namespace AppConfig.APP_ID + ".common"
+}
+
+dependencies {
+    api project(":core:model")
+
+    api Libs.core_ktx
+    api Libs.appcompat
+    api Libs.lifecycle_viewmodel_ktx
+    api Libs.timber
+    api Libs.kotlinx_coroutines_core
+}

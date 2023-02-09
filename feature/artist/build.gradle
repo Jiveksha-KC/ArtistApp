@@ -1,0 +1,9 @@
+apply from: rootProject.file("buildScripts/common-feature.gradle")
+
+android {
+    namespace AppConfig.APP_ID + ".artist"
+}
+
+dependencies {
+    implementation project(":repository:network-api")
+}

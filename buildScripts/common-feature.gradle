@@ -1,0 +1,14 @@
+apply plugin: "com.android.library"
+apply from: rootProject.file("buildScripts/common.gradle")
+apply from: rootProject.file("buildScripts/common-compose.gradle")
+
+dependencies {
+    implementation project(":core:common")
+    implementation project(":core:resource")
+
+    implementation project(":core:ui")
+
+    compilerDependencies()
+
+    testImplementation project(":test-utils:unit-test")
+}

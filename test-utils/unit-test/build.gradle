@@ -1,0 +1,15 @@
+apply from: rootProject.file("buildScripts/common-lib.gradle")
+
+android {
+    namespace AppConfig.APP_ID + ".testutil.unittest"
+}
+
+dependencies {
+    implementation project(":core:common")
+
+    api Libs.junit_junit
+    api Libs.mockk
+    api Libs.truth
+    api Libs.core_testing
+    api Libs.kotlinx_coroutines_test
+}

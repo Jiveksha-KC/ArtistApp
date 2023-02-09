@@ -1,0 +1,50 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+
+plugins {
+    // See https://jmfayard.github.io/refreshVersions
+    id 'de.fayard.refreshVersions' version '0.51.0'
+}
+
+refreshVersions {
+    enableBuildSrcLibs()
+    //extraArtifactVersionKeyRules(file("refreshVersions-extra-rules.txt"))
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url = uri("https://oss.sonatype.org/content/repositories/snapshots/")
+        }
+    }
+}
+
+rootProject.name = "ArtistApp"
+include ':app'
+
+/* Core Libs */
+include 'core:common'
+include ':core:ui'
+include ':core:model'
+include ':core:resource'
+
+/* Arbitrary Libs */
+include ':lib:network'
+
+/* Repositories */
+include ':repository:network-api'
+
+/* Features */
+include ':feature:artist'
+include ':feature:search'
+
+/* Test Utils */
+include ':test-utils:unit-test'

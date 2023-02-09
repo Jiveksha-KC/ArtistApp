@@ -1,0 +1,7 @@
+apply plugin: "com.android.library"
+apply from: rootProject.file("buildScripts/common.gradle")
+
+dependencies {
+
+    compilerDependencies()
+}

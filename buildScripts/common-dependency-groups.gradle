@@ -1,0 +1,10 @@
+def group(Closure closure) {
+    closure.delegate = dependencies
+    return closure
+}
+
+ext.compilerDependencies = group {
+    api Libs.hilt_android
+    kapt Libs.hilt_android_compiler
+    kapt Libs.moshi_kotlin_codegen
+}

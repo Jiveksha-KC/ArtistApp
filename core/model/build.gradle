@@ -1,0 +1,13 @@
+apply from: rootProject.file("buildScripts/common-lib.gradle")
+
+android {
+    namespace AppConfig.APP_ID + ".model"
+}
+
+dependencies {
+    api Libs.moshi
+
+    implementation Libs.appcompat
+    implementation Libs.logging_interceptor
+    implementation Libs.converter_moshi
+}

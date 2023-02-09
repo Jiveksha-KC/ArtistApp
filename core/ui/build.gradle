@@ -1,0 +1,28 @@
+apply from: rootProject.file("buildScripts/common-lib.gradle")
+apply from: rootProject.file("buildScripts/common-compose.gradle")
+
+android {
+    namespace AppConfig.APP_ID + ".ui"
+}
+
+dependencies {
+    implementation project(":core:common")
+    implementation project(":core:resource")
+
+    api Libs.com_google_android_material_material
+    api Libs.androidx_compose_material_material
+    api Libs.material3
+
+    api Libs.material_icons_extended
+    api Libs.material3_window_size_class
+    api Libs.ui
+    api Libs.ui_tooling_preview
+    api Libs.activity_compose
+    api Libs.ui_tooling
+    api Libs.ui_util
+    api Libs.accompanist_systemuicontroller
+
+    api Libs.accompanist_placeholder_material
+
+    debugApi Libs.ui_test_manifest
+}

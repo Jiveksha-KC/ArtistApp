@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Round-Up</string>
+
+    <!-- General -->
+    <string name="general_generic_error_title">Oops something went wrong</string>
+    <string name="general_generic_error_message">Something’s not working right now. Please try again later</string>
+    <string name="general_network_error_title">Connection lost</string>
+    <string name="general_network_error_message">You’ve lost connection to the internet, please check your settings or try again later.</string>
+    <string name="general_retry_button">Retry</string>
+    <string name="general_ok_button">OK</string>
+    <string name="general_cancel_button">Cancel</string>
+    <string name="general_loading_label">Loading</string>
+
+    <string name="search_title">Search</string>
+    <string name="music_image_description">Music Image</string>
+
+    <string name="artist_title">Artist</string>
+    <string name="artist_name_text">%1$s, %2$s</string>
+    <string name="artist_gender_label">Gender:</string>
+    <string name="artist_no_albums">No recorded Albums. Stay Tuned!</string>
+
+
+</resources>
